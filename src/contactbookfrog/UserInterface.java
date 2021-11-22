@@ -357,6 +357,11 @@ public class UserInterface extends javax.swing.JFrame {
         go_back_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         go_back_button.setOpaque(true);
         go_back_button.setPreferredSize(new java.awt.Dimension(90, 40));
+        go_back_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                go_back_buttonActionPerformed(evt);
+            }
+        });
         OutputContact.add(go_back_button);
         OutputContact.add(filler3);
 
@@ -498,6 +503,12 @@ public class UserInterface extends javax.swing.JFrame {
         // TODO add your handling code here:
         validate.onlyText(evt);
     }//GEN-LAST:event_last_nameKeyTyped
+
+    private void go_back_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_go_back_buttonActionPerformed
+        // TODO add your handling code here:
+        InputContact.setVisible(true);                    
+        OutputContact.setVisible(false);
+    }//GEN-LAST:event_go_back_buttonActionPerformed
 
     /**
      * @param args the command line arguments
