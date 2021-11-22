@@ -176,6 +176,12 @@ public class UserInterface extends javax.swing.JFrame {
 
     private void clear_all_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear_all_buttonActionPerformed
         // TODO add your handling code here:
+        // Set default
+        first_name.setText("First Name");        
+        middle_name.setText("Middle Name");
+        last_name.setText("Last Name");
+        mobile_number.setText("Mobile Number");
+        email_address.setText("Email Address");
     }//GEN-LAST:event_clear_all_buttonActionPerformed
 
     private void first_nameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_first_nameFocusGained
