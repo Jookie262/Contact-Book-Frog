@@ -36,6 +36,33 @@ public class UserInterface extends javax.swing.JFrame {
         submit_button = new javax.swing.JButton();
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(20, 0), new java.awt.Dimension(32767, 0));
         clear_all_button = new javax.swing.JButton();
+        OutputContact = new javax.swing.JPanel();
+        logo1 = new javax.swing.JLabel();
+        filler16 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(450, 0), new java.awt.Dimension(0, 0));
+        DisplayContact = new javax.swing.JPanel();
+        fname_label = new javax.swing.JLabel();
+        filler11 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(230, 0), new java.awt.Dimension(0, 0));
+        fname_text = new javax.swing.JLabel();
+        filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(450, 0), new java.awt.Dimension(0, 0));
+        mname_label = new javax.swing.JLabel();
+        filler12 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(220, 0), new java.awt.Dimension(0, 0));
+        mname_text = new javax.swing.JLabel();
+        filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(450, 0), new java.awt.Dimension(0, 0));
+        lname_label = new javax.swing.JLabel();
+        filler13 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(230, 0), new java.awt.Dimension(0, 0));
+        lname_text = new javax.swing.JLabel();
+        filler9 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(450, 0), new java.awt.Dimension(0, 0));
+        mnum_label = new javax.swing.JLabel();
+        filler14 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(200, 0), new java.awt.Dimension(0, 0));
+        mnum_text = new javax.swing.JLabel();
+        filler10 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(450, 0), new java.awt.Dimension(0, 0));
+        email_label = new javax.swing.JLabel();
+        filler15 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(200, 5), new java.awt.Dimension(0, 0));
+        email_text = new javax.swing.JLabel();
+        filler17 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(450, 0), new java.awt.Dimension(0, 0));
+        go_back_button = new javax.swing.JButton();
+        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(12, 0), new java.awt.Dimension(32767, 0));
+        save_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Contact Book Frog");
@@ -166,6 +193,162 @@ public class UserInterface extends javax.swing.JFrame {
 
         getContentPane().add(InputContact, java.awt.BorderLayout.CENTER);
 
+        OutputContact.setBackground(new java.awt.Color(254, 185, 20));
+        OutputContact.setPreferredSize(new java.awt.Dimension(420, 720));
+        OutputContact.setVisible(false);
+
+        logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
+        logo.setFocusable(true);
+        OutputContact.add(logo1);
+        OutputContact.add(filler16);
+
+        DisplayContact.setBackground(new java.awt.Color(188, 211, 95));
+        DisplayContact.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        DisplayContact.setAutoscrolls(true);
+        DisplayContact.setPreferredSize(new java.awt.Dimension(380, 380));
+        DisplayContact.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 15, 10));
+
+        fname_label.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        fname_label.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        fname_label.setText("First Name:");
+        fname_label.setForeground(Color.BLACK);
+        fname_label.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        fname_label.setAlignmentX(-50.0F);
+        fname_label.setAlignmentY(0.0F);
+        fname_label.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        DisplayContact.add(fname_label);
+        DisplayContact.add(filler11);
+
+        fname_text.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        fname_text.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        fname_text.setText("fname");
+        fname_text.setForeground(Color.BLACK);
+        fname_text.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        fname_text.setAlignmentX(-50.0F);
+        fname_text.setAlignmentY(0.0F);
+        fname_text.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        DisplayContact.add(fname_text);
+        DisplayContact.add(filler7);
+
+        mname_label.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        mname_label.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        mname_label.setText("Middle Name:");
+        mname_label.setForeground(Color.BLACK);
+        mname_label.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        mname_label.setAlignmentX(-50.0F);
+        mname_label.setAlignmentY(0.0F);
+        mname_label.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        DisplayContact.add(mname_label);
+        DisplayContact.add(filler12);
+
+        mname_text.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        mname_text.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        mname_text.setText("mname");
+        mname_text.setForeground(Color.BLACK);
+        mname_text.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        mname_text.setAlignmentX(-50.0F);
+        mname_text.setAlignmentY(0.0F);
+        mname_text.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        DisplayContact.add(mname_text);
+        DisplayContact.add(filler8);
+
+        lname_label.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        lname_label.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lname_label.setText("Last Name:");
+        lname_label.setForeground(Color.BLACK);
+        lname_label.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lname_label.setAlignmentX(-50.0F);
+        lname_label.setAlignmentY(0.0F);
+        lname_label.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        DisplayContact.add(lname_label);
+        DisplayContact.add(filler13);
+
+        lname_text.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lname_text.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lname_text.setText("lname");
+        lname_text.setForeground(Color.BLACK);
+        lname_text.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lname_text.setAlignmentX(-50.0F);
+        lname_text.setAlignmentY(0.0F);
+        lname_text.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        DisplayContact.add(lname_text);
+        DisplayContact.add(filler9);
+
+        mnum_label.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        mnum_label.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        mnum_label.setText("Mobile Number:");
+        mnum_label.setForeground(Color.BLACK);
+        mnum_label.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        mnum_label.setAlignmentX(-50.0F);
+        mnum_label.setAlignmentY(0.0F);
+        mnum_label.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        DisplayContact.add(mnum_label);
+        DisplayContact.add(filler14);
+
+        mnum_text.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        mnum_text.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        mnum_text.setText("09999999999");
+        mnum_text.setForeground(Color.BLACK);
+        mnum_text.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        mnum_text.setAlignmentX(-50.0F);
+        mnum_text.setAlignmentY(0.0F);
+        mnum_text.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        DisplayContact.add(mnum_text);
+        DisplayContact.add(filler10);
+
+        email_label.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        email_label.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        email_label.setText("Email Address:");
+        email_label.setForeground(Color.BLACK);
+        email_label.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        email_label.setAlignmentX(-50.0F);
+        email_label.setAlignmentY(0.0F);
+        email_label.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        DisplayContact.add(email_label);
+        DisplayContact.add(filler15);
+
+        email_text.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        email_text.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        email_text.setText("e@mail.com");
+        email_text.setForeground(Color.BLACK);
+        email_text.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        email_text.setAlignmentX(-50.0F);
+        email_text.setAlignmentY(0.0F);
+        email_text.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        DisplayContact.add(email_text);
+
+        OutputContact.add(DisplayContact);
+        OutputContact.add(filler17);
+
+        go_back_button.setBackground(new java.awt.Color(232, 228, 228));
+        go_back_button.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        go_back_button.setText("Go Back");
+        go_back_button.setFocusPainted(false);
+        go_back_button.setForeground(Color.BLACK);
+        go_back_button.setAlignmentX(10.0F);
+        go_back_button.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        go_back_button.setContentAreaFilled(false);
+        go_back_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        go_back_button.setOpaque(true);
+        go_back_button.setPreferredSize(new java.awt.Dimension(90, 40));
+        OutputContact.add(go_back_button);
+        OutputContact.add(filler3);
+
+        save_button.setBackground(new java.awt.Color(232, 228, 228));
+        save_button.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        save_button.setText("Save");
+        save_button.setFocusPainted(false);
+        save_button.setForeground(Color.BLACK);
+        save_button.setAlignmentX(10.0F);
+        save_button.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        save_button.setContentAreaFilled(false);
+        save_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        save_button.setOpaque(true);
+        save_button.setPreferredSize(new java.awt.Dimension(90, 40));
+        OutputContact.add(save_button);
+
+        getContentPane().add(OutputContact, java.awt.BorderLayout.PAGE_START);
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -280,15 +463,42 @@ public class UserInterface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel DisplayContact;
     private javax.swing.JPanel InputContact;
+    private javax.swing.JPanel OutputContact;
     private javax.swing.JButton clear_all_button;
     private javax.swing.JTextField email_address;
+    private javax.swing.JLabel email_label;
+    private javax.swing.JLabel email_text;
+    private javax.swing.Box.Filler filler10;
+    private javax.swing.Box.Filler filler11;
+    private javax.swing.Box.Filler filler12;
+    private javax.swing.Box.Filler filler13;
+    private javax.swing.Box.Filler filler14;
+    private javax.swing.Box.Filler filler15;
+    private javax.swing.Box.Filler filler16;
+    private javax.swing.Box.Filler filler17;
     private javax.swing.Box.Filler filler2;
+    private javax.swing.Box.Filler filler3;
+    private javax.swing.Box.Filler filler7;
+    private javax.swing.Box.Filler filler8;
+    private javax.swing.Box.Filler filler9;
     private javax.swing.JTextField first_name;
+    private javax.swing.JLabel fname_label;
+    private javax.swing.JLabel fname_text;
+    private javax.swing.JButton go_back_button;
     private javax.swing.JTextField last_name;
+    private javax.swing.JLabel lname_label;
+    private javax.swing.JLabel lname_text;
     private javax.swing.JLabel logo;
+    private javax.swing.JLabel logo1;
     private javax.swing.JTextField middle_name;
+    private javax.swing.JLabel mname_label;
+    private javax.swing.JLabel mname_text;
+    private javax.swing.JLabel mnum_label;
+    private javax.swing.JLabel mnum_text;
     private javax.swing.JTextField mobile_number;
+    private javax.swing.JButton save_button;
     private javax.swing.JButton submit_button;
     // End of variables declaration//GEN-END:variables
 }
