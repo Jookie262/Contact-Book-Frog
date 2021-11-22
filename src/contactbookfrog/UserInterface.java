@@ -46,6 +46,7 @@ public class UserInterface extends javax.swing.JFrame {
         InputContact.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 1, 15));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
+        logo.setFocusable(true);
         InputContact.add(logo);
 
         first_name.setBackground(new java.awt.Color(188, 211, 95));
@@ -54,6 +55,14 @@ public class UserInterface extends javax.swing.JFrame {
         first_name.setForeground(Color.BLACK);
         first_name.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         first_name.setPreferredSize(new java.awt.Dimension(350, 60));
+        first_name.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                first_nameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                first_nameFocusLost(evt);
+            }
+        });
         InputContact.add(first_name);
 
         middle_name.setBackground(new java.awt.Color(188, 211, 95));
@@ -62,6 +71,14 @@ public class UserInterface extends javax.swing.JFrame {
         middle_name.setForeground(Color.BLACK);
         middle_name.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         middle_name.setPreferredSize(new java.awt.Dimension(350, 60));
+        middle_name.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                middle_nameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                middle_nameFocusLost(evt);
+            }
+        });
         InputContact.add(middle_name);
 
         last_name.setBackground(new java.awt.Color(188, 211, 95));
@@ -70,6 +87,14 @@ public class UserInterface extends javax.swing.JFrame {
         last_name.setForeground(Color.BLACK);
         last_name.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         last_name.setPreferredSize(new java.awt.Dimension(350, 60));
+        last_name.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                last_nameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                last_nameFocusLost(evt);
+            }
+        });
         InputContact.add(last_name);
 
         mobile_number.setBackground(new java.awt.Color(188, 211, 95));
@@ -78,6 +103,14 @@ public class UserInterface extends javax.swing.JFrame {
         mobile_number.setForeground(Color.BLACK);
         mobile_number.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         mobile_number.setPreferredSize(new java.awt.Dimension(350, 60));
+        mobile_number.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                mobile_numberFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                mobile_numberFocusLost(evt);
+            }
+        });
         InputContact.add(mobile_number);
 
         email_address.setBackground(new java.awt.Color(188, 211, 95));
@@ -86,6 +119,14 @@ public class UserInterface extends javax.swing.JFrame {
         email_address.setForeground(Color.BLACK);
         email_address.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         email_address.setPreferredSize(new java.awt.Dimension(350, 60));
+        email_address.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                email_addressFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                email_addressFocusLost(evt);
+            }
+        });
         InputContact.add(email_address);
 
         submit_button.setBackground(new java.awt.Color(232, 228, 228));
@@ -136,6 +177,66 @@ public class UserInterface extends javax.swing.JFrame {
     private void clear_all_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear_all_buttonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_clear_all_buttonActionPerformed
+
+    private void first_nameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_first_nameFocusGained
+        // TODO add your handling code here:
+        if(first_name.getText().equals("First Name"))
+            first_name.setText("");
+    }//GEN-LAST:event_first_nameFocusGained
+
+    private void first_nameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_first_nameFocusLost
+        // TODO add your handling code here:
+        if(first_name.getText().equals(""))
+            first_name.setText("First Name");
+    }//GEN-LAST:event_first_nameFocusLost
+
+    private void middle_nameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_middle_nameFocusGained
+        // TODO add your handling code here:
+        if(middle_name.getText().equals("Middle Name"))
+            middle_name.setText("");
+    }//GEN-LAST:event_middle_nameFocusGained
+
+    private void middle_nameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_middle_nameFocusLost
+        // TODO add your handling code here:
+        if(middle_name.getText().equals(""))
+            middle_name.setText("Middle Name");
+    }//GEN-LAST:event_middle_nameFocusLost
+
+    private void last_nameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_last_nameFocusGained
+        // TODO add your handling code here:
+        if(last_name.getText().equals("Last Name"))
+            last_name.setText("");
+    }//GEN-LAST:event_last_nameFocusGained
+
+    private void last_nameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_last_nameFocusLost
+        // TODO add your handling code here:
+        if(last_name.getText().equals(""))
+            last_name.setText("Last Name");
+    }//GEN-LAST:event_last_nameFocusLost
+
+    private void mobile_numberFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_mobile_numberFocusGained
+        // TODO add your handling code here:
+        if(mobile_number.getText().equals("Mobile Number"))
+            mobile_number.setText("");
+    }//GEN-LAST:event_mobile_numberFocusGained
+
+    private void mobile_numberFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_mobile_numberFocusLost
+        // TODO add your handling code here:
+        if(mobile_number.getText().equals(""))
+            mobile_number.setText("Mobile Number");
+    }//GEN-LAST:event_mobile_numberFocusLost
+
+    private void email_addressFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_email_addressFocusGained
+        // TODO add your handling code here:
+        if(email_address.getText().equals("Email Address"))
+            email_address.setText("");
+    }//GEN-LAST:event_email_addressFocusGained
+
+    private void email_addressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_email_addressFocusLost
+        // TODO add your handling code here:
+        if(email_address.getText().equals(""))
+            email_address.setText("Email Address");
+    }//GEN-LAST:event_email_addressFocusLost
 
     /**
      * @param args the command line arguments

@@ -51,6 +51,9 @@
               <Image iconType="3" name="/logo.png"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="logo.setFocusable(true);"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="first_name">
           <Properties>
@@ -77,6 +80,10 @@
               <Dimension value="[350, 60]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="first_nameFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="first_nameFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="middle_name">
           <Properties>
@@ -103,6 +110,10 @@
               <Dimension value="[350, 60]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="middle_nameFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="middle_nameFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="last_name">
           <Properties>
@@ -129,6 +140,10 @@
               <Dimension value="[350, 60]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="last_nameFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="last_nameFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="mobile_number">
           <Properties>
@@ -155,6 +170,10 @@
               <Dimension value="[350, 60]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="mobile_numberFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="mobile_numberFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="email_address">
           <Properties>
@@ -181,6 +200,10 @@
               <Dimension value="[350, 60]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="email_addressFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="email_addressFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="submit_button">
           <Properties>
