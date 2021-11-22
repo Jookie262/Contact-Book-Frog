@@ -392,10 +392,18 @@ public class UserInterface extends javax.swing.JFrame {
             if(validate.validateMobileNum(mobile_number.getText().trim())) {
                 
                 if(validate.validateEmail(email_address.getText().trim())) {
+                    
                     // Since everything has been verified
                     // Proceed to the output section
                     InputContact.setVisible(false);                    
                     OutputContact.setVisible(true);
+                    
+                    // Show the input text to the output section
+                    fname_text.setText(first_name.getText().trim());        
+                    mname_text.setText(middle_name.getText().trim());
+                    lname_text.setText(last_name.getText().trim());
+                    mnum_text.setText(mobile_number.getText().trim());
+                    email_text.setText(email_address.getText().trim());
 
                 } else {
                     // If the input email address is not valid
