@@ -604,6 +604,9 @@
               <Dimension value="[90, 40]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="save_buttonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

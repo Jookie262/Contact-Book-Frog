@@ -15,6 +15,7 @@ public class UserInterface extends javax.swing.JFrame {
      * Call pre-defined classes
      */
     ValidateInput validate = new ValidateInput();
+    ContactFile contactfile = new ContactFile();
 
     /**
      * Creates new form UserInterface
@@ -376,6 +377,11 @@ public class UserInterface extends javax.swing.JFrame {
         save_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         save_button.setOpaque(true);
         save_button.setPreferredSize(new java.awt.Dimension(90, 40));
+        save_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                save_buttonActionPerformed(evt);
+            }
+        });
         OutputContact.add(save_button);
 
         getContentPane().add(OutputContact, java.awt.BorderLayout.PAGE_START);
@@ -425,11 +431,7 @@ public class UserInterface extends javax.swing.JFrame {
     private void clear_all_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear_all_buttonActionPerformed
         // TODO add your handling code here:
         // Set default
-        first_name.setText("First Name");        
-        middle_name.setText("Middle Name");
-        last_name.setText("Last Name");
-        mobile_number.setText("Mobile Number");
-        email_address.setText("Email Address");
+        setDefaultInput();
     }//GEN-LAST:event_clear_all_buttonActionPerformed
 
     private void first_nameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_first_nameFocusGained
@@ -518,6 +520,28 @@ public class UserInterface extends javax.swing.JFrame {
         OutputContact.setVisible(false);
     }//GEN-LAST:event_go_back_buttonActionPerformed
 
+    private void save_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_save_buttonActionPerformed
+        // TODO add your handling code here:
+        // call method addData to insert the user input to text file
+        if(contactfile.addData(fname_text.getText(), mname_text.getText(), lname_text.getText(), mnum_text.getText(), email_address.getText())){
+            showMessageDialog(null, "Sucessfully Inserted");
+            InputContact.setVisible(true);                    
+            OutputContact.setVisible(false);
+            setDefaultInput();
+        } else {
+            showMessageDialog(null, "Error");
+        }
+    }//GEN-LAST:event_save_buttonActionPerformed
+
+    // Method that sets the input to default
+    private void setDefaultInput(){
+        first_name.setText("First Name");        
+        middle_name.setText("Middle Name");
+        last_name.setText("Last Name");
+        mobile_number.setText("Mobile Number");
+        email_address.setText("Email Address");
+    }
+    
     /**
      * @param args the command line arguments
      */
