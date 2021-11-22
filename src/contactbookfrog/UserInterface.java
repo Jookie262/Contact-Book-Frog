@@ -4,6 +4,7 @@
  */
 package contactbookfrog;
 import java.awt.Color;
+import java.awt.Toolkit;
 import static javax.swing.JOptionPane.showMessageDialog;
 /**
  *
@@ -22,6 +23,7 @@ public class UserInterface extends javax.swing.JFrame {
      */
     public UserInterface() {
         initComponents();
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage("res/icon.png")); // Change the icon
     }
 
     /**
