@@ -496,7 +496,6 @@ public class UserInterface extends javax.swing.JFrame {
 
     private void mobile_numberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mobile_numberKeyTyped
         // TODO add your handling code here:
-        validate.onlyNumbers(evt);
     }//GEN-LAST:event_mobile_numberKeyTyped
 
     private void first_nameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_first_nameKeyTyped

@@ -13,12 +13,6 @@ import java.util.regex.Pattern;
  */
 public class ValidateInput {
     
-    // Method that only Accepts Number
-    public void onlyNumbers(java.awt.event.KeyEvent evt){
-        if (!Character.isDigit(evt.getKeyChar()))
-           evt.consume();
-    }
-    
     // Method that Accepts Text not Numbers
     public void onlyText(java.awt.event.KeyEvent evt){
         if (Character.isDigit(evt.getKeyChar()))
