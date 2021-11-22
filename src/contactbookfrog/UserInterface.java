@@ -4,11 +4,17 @@
  */
 package contactbookfrog;
 import java.awt.Color;
+import static javax.swing.JOptionPane.showMessageDialog;
 /**
  *
  * @author Jolou
  */
 public class UserInterface extends javax.swing.JFrame {
+    
+    /**
+     * Call pre-defined classes
+     */
+    ValidateInput validate = new ValidateInput();
 
     /**
      * Creates new form UserInterface
@@ -90,6 +96,11 @@ public class UserInterface extends javax.swing.JFrame {
                 first_nameFocusLost(evt);
             }
         });
+        first_name.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                first_nameKeyTyped(evt);
+            }
+        });
         InputContact.add(first_name);
 
         middle_name.setBackground(new java.awt.Color(188, 211, 95));
@@ -104,6 +115,11 @@ public class UserInterface extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 middle_nameFocusLost(evt);
+            }
+        });
+        middle_name.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                middle_nameKeyTyped(evt);
             }
         });
         InputContact.add(middle_name);
@@ -122,6 +138,11 @@ public class UserInterface extends javax.swing.JFrame {
                 last_nameFocusLost(evt);
             }
         });
+        last_name.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                last_nameKeyTyped(evt);
+            }
+        });
         InputContact.add(last_name);
 
         mobile_number.setBackground(new java.awt.Color(188, 211, 95));
@@ -136,6 +157,11 @@ public class UserInterface extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 mobile_numberFocusLost(evt);
+            }
+        });
+        mobile_number.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                mobile_numberKeyTyped(evt);
             }
         });
         InputContact.add(mobile_number);
@@ -355,6 +381,32 @@ public class UserInterface extends javax.swing.JFrame {
 
     private void submit_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submit_buttonActionPerformed
         // TODO add your handling code here:
+        // Validates the user input before proceeding in showing the output
+        if(!validate.checkEmpty(first_name.getText(), middle_name.getText(), last_name.getText(), mobile_number.getText(), email_address.getText())){
+            
+            if(validate.validateMobileNum(mobile_number.getText().trim())) {
+                
+                if(validate.validateEmail(email_address.getText().trim())) {
+                    // Since everything has been verified
+                    // Proceed to the output section
+                    InputContact.setVisible(false);                    
+                    OutputContact.setVisible(true);
+
+                } else {
+                    // If the input email address is not valid
+                    showMessageDialog(null, "Not Valid Email Address!");
+                }
+                
+            } else {
+                // If the input number is not valid
+                showMessageDialog(null, "Not Valid Mobile Number! Ph only!");
+            }
+            
+        } else {
+            // If there is an empty field, show warning modal
+            showMessageDialog(null, "Please input the missing text field!");
+        }
+        
     }//GEN-LAST:event_submit_buttonActionPerformed
 
     private void clear_all_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear_all_buttonActionPerformed
@@ -426,6 +478,26 @@ public class UserInterface extends javax.swing.JFrame {
         if(email_address.getText().equals(""))
             email_address.setText("Email Address");
     }//GEN-LAST:event_email_addressFocusLost
+
+    private void mobile_numberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mobile_numberKeyTyped
+        // TODO add your handling code here:
+        validate.onlyNumbers(evt);
+    }//GEN-LAST:event_mobile_numberKeyTyped
+
+    private void first_nameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_first_nameKeyTyped
+        // TODO add your handling code here:
+        validate.onlyText(evt);
+    }//GEN-LAST:event_first_nameKeyTyped
+
+    private void middle_nameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_middle_nameKeyTyped
+        // TODO add your handling code here:
+        validate.onlyText(evt);
+    }//GEN-LAST:event_middle_nameKeyTyped
+
+    private void last_nameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_last_nameKeyTyped
+        // TODO add your handling code here:
+        validate.onlyText(evt);
+    }//GEN-LAST:event_last_nameKeyTyped
 
     /**
      * @param args the command line arguments
